@@ -1,0 +1,24 @@
+Read N
+Load zero
+Store count
+Store sum
+Loop: Read X
+Load X
+ADD sum
+Store sum
+Load count
+ADD one
+Store count
+SUB N
+JZ Outer
+JMP Loop
+Outer: Write sum
+Stop
+Endp
+zero CONST 0
+one CONST 1
+sum DB ?
+count DB ?
+N DB ?
+X DB ?
+END
