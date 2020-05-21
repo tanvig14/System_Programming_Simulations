@@ -4,3 +4,5 @@ The "linker.py" file is the file which is supposed to simulate a linker, which t
 The "main.cpp" file is the input file being being read by the python file.
 
 The "ex.cpp" file has some external variables declared in it. This file is being included in the "main.cpp" file.
+
+The output of the linker program is the GVT (Global variable table) and the EVT (External variable table).
