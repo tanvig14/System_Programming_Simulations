@@ -88,8 +88,7 @@ public class Assembler
 	
 	public static void Pass1() throws IOException, FileNotFoundException
 	{
-		System.out.println("\n Pass 1 ");
-		
+		System.out.println("\n Pass 1 ");	
 		inputReader = new FileReader("input_file.txt");
 		inputBuffer = new BufferedReader(inputReader);
 		
@@ -99,9 +98,7 @@ public class Assembler
 			int temp_index, i;
 			String temp[] = str.split(" ");
 			if(temp.length == 1)										
-			{
 				LC++;
-			}
 			else
 			{
 				if(temp.length == 2)
@@ -121,9 +118,7 @@ public class Assembler
 				for(i = 0; i < 12; i++)
 				{
 					if(temp[temp_index].equals(mot[i].mnemonic))
-					{
 						LC += mot[i].length;
-					} 
 				} 
 				
 				for(i = 0; i < symbol_count; i++)
@@ -172,7 +167,6 @@ public class Assembler
 				sym_tbl[sym_tbl_index].address = LC;
 				LC++;
 			}
-			
 			str = inputBuffer.readLine();
 		} 
 		System.out.println("\n");
@@ -198,9 +192,7 @@ public class Assembler
 			System.out.println(str);
 			
 			if(str.equals("Stop"))
-			{
 				outputWriter.append("12" + "\n");
-			}
 			else
 			{
 				String temp[] = str.split(" ");
@@ -244,12 +236,10 @@ public class Assembler
 	public static void main(String[] args) throws IOException, FileNotFoundException
 	{
 		init();
-		
 		try
 		{
 			Pass1();	
-			Pass2();
-			
+			Pass2();	
 		} 
 		catch(Exception e)
 		{
