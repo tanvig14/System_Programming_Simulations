@@ -1,0 +1,13 @@
+macro ABC
+load p
+add q
+mend
+macro XYZ
+load a
+add b
+mend
+.code
+XYZ
+add b
+ABC
+End
