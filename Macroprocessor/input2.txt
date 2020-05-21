@@ -1,0 +1,24 @@
+macro ABC &a, &b, &c, &d
+load &a
+add &b
+sub &c
+add &d
+mend
+macro XYZ &p, &q, &r
+load x
+add &p
+sub &q
+mult y
+mend
+macro VIT &p, &q, &r
+load x
+add &p
+sub &q
+mult y
+mend
+.code
+XYZ 3,4,5
+add t
+VIT 2,4,7
+ABC 3,4,8,9
+End
