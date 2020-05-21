@@ -100,7 +100,6 @@ public class Assembler
 			String temp[] = str.split(" ");
 			if(temp.length == 1)										
 			{
-				//System.out.println(" LC = " + LC);
 				LC++;
 			}
 			else
@@ -111,8 +110,6 @@ public class Assembler
 				{
 					sym_tbl[symbol_count] = new Sym_Table();			
 					String temp_label[] = temp[0].split(":");
-					//System.out.println(temp_label[0]);
-					//System.out.println(" Label LC = " + LC);
 					
 					sym_tbl[symbol_count].symbol = temp_label[0];
 					sym_tbl[symbol_count].address = LC;
@@ -125,8 +122,6 @@ public class Assembler
 				{
 					if(temp[temp_index].equals(mot[i].mnemonic))
 					{
-						//System.out.println(mot[i].mnemonic + "\t" + mot[i].opcode);
-						//System.out.println(" LC = " + LC);
 						LC += mot[i].length;
 					} 
 				} 
@@ -151,10 +146,8 @@ public class Assembler
 						sym_tbl[symbol_count] = new Sym_Table();
 						sym_tbl[symbol_count].symbol = temp[temp_index+1];
 						symbol_count++;
-						//System.out.println(" New symbol added - " + temp[temp_index+1]);
 					}
 				} 
-				//System.out.println("\n");
 			}
 			str = inputBuffer.readLine();
 		} 
@@ -240,7 +233,7 @@ public class Assembler
 			}
 			
 			str = inputBuffer.readLine();
-		} //while()
+		}
 		System.out.println("\n");
 		
 		inputReader.close();
@@ -254,20 +247,15 @@ public class Assembler
 		
 		try
 		{
-//			inputReader = new FileReader("C:\\Users\\Tanvi\\workspace\\SS_Assembler\\src\\input_file.txt");
-//			inputBuffer = new BufferedReader(inputReader);
-//			outputWriter = new FileWriter("C:\\Users\\Tanvi\\workspace\\SS_Macro\\src\\Expanded_Code.txt");
-			
-			Pass1();
-			
+			Pass1();	
 			Pass2();
 			
-		} //try()
+		} 
 		catch(Exception e)
 		{
 			System.out.print(" Exception handled : ");
 			e.printStackTrace();
-		} //catch()
+		} 
 		
 		finally
 		{
