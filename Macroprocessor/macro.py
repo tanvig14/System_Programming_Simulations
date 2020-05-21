@@ -1,4 +1,4 @@
-f = open ("file.txt", "r")
+f = open ("input1.txt", "r")
 line = f.readline()
 i = 0
 j = 0
